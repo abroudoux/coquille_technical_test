@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'contact_index' %}
+
+{% block body %}
+    {# <h1>Hello world !</h1> #}
+
+    <section id="contact_form">
+        <div id="contact_left" class="form-side">
+            <div id="contact_title">
+                <h1>Contactez-nous !</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div id="contact_infos">
+                <ul>
+                    <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ab.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ab.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ab.
+                    </li>
+                </ul>
+            </div>
+            <div id="contact_link">
+                <p>Lorem ipsum dolor sit <span><a href="">amet.</a></span></p>
+            </div>
+        </div>
+        <div id="contact_right" class="form-side">
+            <form id="form">
+                <div id="form_name">
+                    <div class="input">
+                        <label for="firstName">Prénom *</label>
+                        <input type="text" name="firstName" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="lastName">Nom *</label>
+                        <input type="text" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <label for="email">Email *</label>
+                    <input type="text" name="email" required>
+                </div>
+
+
+                <div class="input">
+                    <label for="company">Société</label>
+                    <input type="text" name="email">
+                </div>
+
+                <div class="input">
+                    <label for="size">Taille de votre société</label>
+                    <select name="size">
+                        <option value="/">Choisissez ...</option>
+                        <option value="1">Entre 1 et 10 employés/collaborateurs</option>
+                        <option value="2">Entre 10 et 50 employés/collaborateurs</option>
+                        <option value="3">Entre 50 et 100 employés/collaborateurs</option>
+                        <option value="4">plus de 100 employés/collaborateurs</option>
+                    </select>
+                </div>
+
+                <div class="input">
+                    <label for="message">Message *</label>
+                    <textarea name="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+
+            <p>Les champs marqués d'un astérisque (*) sont obligatoires</p>
+
+            <button type="submit" form="form" value="Submit">Envoyer</button>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  www:
+    build: .
+    container_name: technical_test_coquille
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/var/www
+    command: ["symfony", "server:start"]
+  #encore:
+    #image: node:16.20.0-alpine3.18
+    #volumes:
+    #  - ./:/var/www
+    #working_dir: /var/www
+    #ports:
+    #  - "${DEV_SERVER_PORT:-8080}:8080"
+    #command: ["npm", "run", "watch", "--host=0.0.0.0"]
